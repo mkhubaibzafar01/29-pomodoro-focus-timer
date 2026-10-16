@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow — Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <a class="brand" href="#">◉ FocusFlow</a>
+      <span class="badge">STAY FOCUSED</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">YOUR PRODUCTIVITY SPACE</p>
+      <h1>Make time<br>for what matters.</h1>
+      <p>One task at a time. One session at a time.</p>
+    </section>
+
+    <section class="timer-card">
+      <div class="mode-tabs">
+        <button class="mode active" data-mode="focus">Focus</button>
+        <button class="mode" data-mode="short">Short Break</button>
+        <button class="mode" data-mode="long">Long Break</button>
+      </div>
+
+      <div class="timer-ring" id="timerRing">
+        <div class="timer-content">
+          <span id="modeLabel">FOCUS SESSION</span>
+          <strong id="timer">25:00</strong>
+          <span id="timerStatus">Ready when you are</span>
+        </div>
+      </div>
+
+      <div class="timer-controls">
+        <button id="startButton" class="primary">▶ Start Focus</button>
+        <button id="resetButton" class="secondary">↻ Reset</button>
+      </div>
+
+      <p class="session-info">
+        Completed sessions: <strong id="sessions">0</strong>
+      </p>
+    </section>
+
+    <section class="settings-card">
+      <h2>Customize your timer</h2>
+
+      <div class="settings-grid">
+        <label>
+          Focus (minutes)
+          <input id="focusDuration" type="number" min="1" max="120" value="25">
+        </label>
+
+        <label>
+          Short break
+          <input id="shortDuration" type="number" min="1" max="60" value="5">
+        </label>
+
+        <label>
+          Long break
+          <input id="longDuration" type="number" min="1" max="60" value="15">
+        </label>
+      </div>
+
+      <button id="applyButton" class="apply-button">Apply settings</button>
+      <p id="message" role="status"></p>
+    </section>
+
+    <footer>Small focused steps lead to big results. ✨</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
